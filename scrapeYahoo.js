@@ -10,15 +10,15 @@ var request = require('request');
 //const CHATWORK_ROOM_ID = '92144693';
 //my room
 const CHATWORK_ROOM_ID = '48953415';
-//const CHATWORK_TOKEN = '8fdbc6d901ead25d7b611bb14b473287';
+//const CHATWORK_TOKEN = '';
 // my token
-const CHATWORK_TOKEN = 'f69390376e7b16d4a0b7ec419972cf56';
+const CHATWORK_TOKEN = '';
 
 var fDate = 'writetest.txt';
 
 AWS.config.update({
-    accessKeyId: "AKIAJVVV2JTVMVDPSYFA",
-    secretAccessKey: "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",
+    accessKeyId: "",
+    secretAccessKey: "",
     region: 'ap-northeast-1'
 });
 
@@ -45,16 +45,16 @@ exports.scrapeYahoo.rss = (event, context, callback) => {
       var form = result.$('form[name=login_form]');
 
       form.field({
-        user_name: 'adonis4907naggle',
-        password: '4vTFQYUh)))))*'
+        user_name: '',
+        password: ''
       });
 
       form.find('input[type=submit]').click(function (err, $, res, body) {
         var form_sub = $('form[name=login_form]');
 
         form_sub.field({
-          user_name: 'adonis4907naggle',
-          password: '4vTFQYUh)))))*'
+          user_name: '',
+          password: ''
         });
 
         form_sub.find('input[type=submit]').click(function (err_sub, $, res_sub, body_sub) {
